@@ -20,4 +20,8 @@ export class PetService {
         const created = await this.repository.create(newPet);
         return created;
     }
+
+    async getAll() {
+        return await this.repository.readAll();
+    }
 }

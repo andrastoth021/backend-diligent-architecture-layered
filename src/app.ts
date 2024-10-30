@@ -42,7 +42,7 @@ export default async function createApp(options = {}, dataFilePath: PathLike) {
   app.get(
     '/pets',
     async () => {
-      const pets = await petStore.read();
+      const pets = await petService.getAll();
       return pets;
     }
   )

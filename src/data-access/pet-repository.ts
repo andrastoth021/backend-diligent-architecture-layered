@@ -30,8 +30,9 @@ export class PetRepository {
         return newPet;
     }
 
-    readAll () {
-        throw new Error('Not Implemented');
+    async readAll () {
+        const pets = await this.store.read();
+        return pets;
     }
 
     readById () {
